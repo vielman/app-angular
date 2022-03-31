@@ -8,5 +8,17 @@ import { Component } from "@angular/core";
 
 
 export class PersonasComponrnt {
+  deshabilitar = false;
+  mensaje= 'No se ha agregado ninguna persona';
+  titulo = 'Ingeniero';
+
+  agregarPersona(){
+    this.mensaje = 'Persona agregada';
+  }
+
+  modificarTitulo(event: Event){
+    console.log('Entradndo al metodo modificar titulo')
+    this.titulo = (<HTMLInputElement>event.target).value;
+  }
 
 }
